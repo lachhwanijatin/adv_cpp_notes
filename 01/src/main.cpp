@@ -1,5 +1,6 @@
 #include <iostream>
 #include "calculator.h"
+#include "maths.h"
 
 int main() {
     Calculator calc;
@@ -7,6 +8,7 @@ int main() {
     double x = 15.0;
     double y = 3.0;
 
+    std::cout << "Square of "<<x<<" is "<<MathFunctions::square(x) << std::endl;
     std::cout << "--- Standard Operations ---\n";
     std::cout << x << " + " << y << " = " << calc.add(x, y) << "\n";
     std::cout << x << " - " << y << " = " << calc.subtract(x, y) << "\n";

@@ -3,12 +3,18 @@ project(simplecalculator)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_subdirectory(maths)
 
 set(SOURCES
     src/main.cpp
     calculator/src/calculator.cpp
 )
 
-include_directories(calculator/include)
+include_directories(calculator/include maths/include)
+
 
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE maths)
