@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../calculator/include/calculator.h"
+#include "calculator.h"
 
 int main() {
     Calculator calc;
