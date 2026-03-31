@@ -12,7 +12,7 @@ set(SOURCES
     calculator/src/calculator.cpp
 )
 
-include_directories(calculator/include maths/include)
+include_directories(calculator/include)
 
 
 add_executable(${PROJECT_NAME} ${SOURCES})
