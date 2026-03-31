@@ -4,4 +4,9 @@ project(simplecalculator)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(${PROJECT_NAME} src/main.cpp calculator/src/calculator.cpp)
+set(SOURCES
+    src/main.cpp
+    calculator/src/calculator.cpp
+)
+
+add_executable(${PROJECT_NAME} ${SOURCES})
