@@ -9,6 +9,9 @@ int main() {
     double y = 3.0;
 
     std::cout << "Square of "<<x<<" is "<<MathFunctions::square(x) << std::endl;
+    #ifdef ADVANCED_API
+    std::cout << "Cube of "<<x<<" is "<<MathFunctions::cube(x) << std::endl;
+    #endif
     std::cout << "--- Standard Operations ---\n";
     std::cout << x << " + " << y << " = " << calc.add(x, y) << "\n";
     std::cout << x << " - " << y << " = " << calc.subtract(x, y) << "\n";

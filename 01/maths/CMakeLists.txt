@@ -8,7 +8,14 @@ set(SOURCES
     src/maths.cpp
 )
 
+option(ADVANCED_API_ENABLE "THIS IS FOR THE ADVANCED API" ON)
+
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
+
+if(ADVANCED_API_ENABLE)
+    message("NOTE: ADVANCED_API_ENABLE is ENABLED")
+    target_compile_definitions(${PROJECT_NAME} PUBLIC ADVANCED_API)
+endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
