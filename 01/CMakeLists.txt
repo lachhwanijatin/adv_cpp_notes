@@ -6,15 +6,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(maths)
+add_subdirectory(calculator)
 
 set(SOURCES
     src/main.cpp
-    calculator/src/calculator.cpp
 )
-
-include_directories(calculator/include)
-
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE maths)
+target_link_libraries(${PROJECT_NAME} PRIVATE maths calculator)
