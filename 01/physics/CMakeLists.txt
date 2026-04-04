@@ -20,3 +20,8 @@ add_library(${PROJECT_NAME} SHARED ${SOURCE})
 target_compile_definitions(${PROJECT_NAME} PRIVATE PHYSICS_EXPORT)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+
+# Other list of useful commands to know in CMake
+# find_package()
+# find_library()
+# set_target_properties()
