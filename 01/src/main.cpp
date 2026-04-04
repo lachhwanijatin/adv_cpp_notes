@@ -1,6 +1,7 @@
 #include <iostream>
 #include "calculator.h"
 #include "maths.h"
+#include "physics.h"
 
 int main() {
     Calculator calc;
@@ -17,6 +18,7 @@ int main() {
     std::cout << x << " - " << y << " = " << calc.subtract(x, y) << "\n";
     std::cout << x << " * " << y << " = " << calc.multiply(x, y) << "\n";
     std::cout << x << " / " << y << " = " << calc.divide(x, y) << "\n";
+    std::cout << "Potential Engery: " << Physics::calculatePotentialEnergy(10,10,50);
 
     std::cout << "\n--- Exception Handling ---\n";
     try {

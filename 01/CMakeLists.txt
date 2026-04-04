@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(maths)
 add_subdirectory(calculator)
+add_subdirectory(physics)
 
 set(SOURCES
     src/main.cpp
@@ -14,4 +15,4 @@ set(SOURCES
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE maths calculator)
+target_link_libraries(${PROJECT_NAME} PRIVATE maths calculator physics)
